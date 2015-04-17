@@ -53,7 +53,7 @@
     <properties>
         <de.cismet.libDir>lib/localCrisma</de.cismet.libDir>
         <netbeans.version>RELEASE691</netbeans.version>
-        <td>/Users/mscholl/Downloads/worldwind-2.0.0/</td>
+        <td>C:\Programme\Java\worldwind-2.0.0\</td>
     </properties>
 
     <dependencies>
@@ -81,6 +81,12 @@
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismet-gui-commons</artifactId>
             <version>2.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.oracle</groupId>
+                    <artifactId>javafx</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>de.cismet.commons</groupId>
@@ -251,7 +257,7 @@
                         <configuration>
                             <compilerArguments>
                                 <sourcepath>${basedir}/src/main/java</sourcepath>
-                                <classpath>${classpath.directDependencies}:${td}/worldwind.jar:${td}/worldwindx.jar:${td}/jogl-all.jar:${td}/gluegen-rt.jar:${td}/gdal.jar</classpath>
+                                <classpath>${classpath.directDependencies};${td}/worldwind.jar;${td}/worldwindx.jar;${td}/jogl-all.jar;${td}/gluegen-rt.jar;${td}/gdal.jar</classpath>
                             </compilerArguments>
                         </configuration>
                     </execution>

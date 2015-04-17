@@ -84,7 +84,7 @@ import de.cismet.cismap.commons.wfs.capabilities.WFSCapabilities;
 import de.cismet.cismap.commons.wfs.capabilities.WFSCapabilitiesFactory;
 import de.cismet.cismap.commons.wfs.capabilities.deegree.DeegreeFeatureType;
 
-import de.cismet.security.AccessHandler.ACCESS_METHODS;
+import de.cismet.commons.security.AccessHandler;
 
 import de.cismet.security.WebAccessManager;
 
@@ -740,7 +740,7 @@ public class ShakemapView extends AbstractDetailView implements MapSync {
                                             .doRequest(
                                                 ft.getWFSCapabilities().getURL(),
                                                 req,
-                                                ACCESS_METHODS.POST_REQUEST);
+                                                AccessHandler.ACCESS_METHODS.POST_REQUEST);
                                 final GMLFeatureCollectionDocument gmlDoc = new GMLFeatureCollectionDocument();
                                 gmlDoc.load(
                                     resp,
